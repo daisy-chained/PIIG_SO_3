@@ -17,7 +17,7 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void loop() {
-
+        SaxionApp.clear();
     }
 
     @Override
