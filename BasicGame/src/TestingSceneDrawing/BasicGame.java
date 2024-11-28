@@ -1,5 +1,6 @@
-import nl.saxion.app.SaxionApp;
+package TestingSceneDrawing;
 
+import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.GameLoop;
 import nl.saxion.app.interaction.KeyboardEvent;
 import nl.saxion.app.interaction.MouseEvent;
