@@ -17,7 +17,7 @@ public class BasicGame implements GameLoop {
     private int fishY = 300;
     private int fishSpeed = 2;
     Color myColor = SaxionApp.createColor(135, 206, 250);
-    private boolean isFishClicked = false;
+    public boolean isFishClicked = false;
 
     @Override
     public void init() {
@@ -38,11 +38,11 @@ public class BasicGame implements GameLoop {
             }
         SaxionApp.setFill(Color.RED);
         SaxionApp.drawRectangle(fishX, fishY, 50, 30);
+        SaxionApp.drawRectangle(200, 400, 100, 50);
             }
 
     @Override
     public void keyboardEvent(KeyboardEvent keyboardEvent) {
-
 
     }
 
@@ -50,8 +50,8 @@ public class BasicGame implements GameLoop {
     public void mouseEvent(MouseEvent mouseEvent) {
 
         if (mouseEvent.isMouseDown() &&
-                mouseEvent.getX() >= fishX && mouseEvent.getX() <= fishX + 50 &&
-                mouseEvent.getY() >= fishY && mouseEvent.getY() <= fishY + 30)
+                mouseEvent.getX() >= fishX - 50 && mouseEvent.getX() <= fishX + 50 &&
+                mouseEvent.getY() >= fishY - 30 && mouseEvent.getY() <= fishY + 30)
         {
             SaxionApp.printLine("Fish Clicked");
             isFishClicked = true;
