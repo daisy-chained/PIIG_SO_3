@@ -8,7 +8,6 @@ import nl.saxion.app.interaction.MouseEvent;
 import java.awt.*;
 
 public class BasicGame implements GameLoop {
-
     public static void main(String[] args) {
         SaxionApp.startGameLoop(new BasicGame(), 1000, 1000, 40);
     }
@@ -18,12 +17,10 @@ public class BasicGame implements GameLoop {
     private int fishSpeed = 2;
     Color myColor = SaxionApp.createColor(135, 206, 250);
     public boolean isFishClicked = false;
-
     @Override
     public void init() {
         SaxionApp.turnBorderOff();
     }
-
     @Override
     public void loop() {
             SaxionApp.clear();
@@ -32,7 +29,6 @@ public class BasicGame implements GameLoop {
         SaxionApp.drawRectangle(0, 0, 1000, 1000);
 
             fishX += fishSpeed;
-
             if (fishX > 640 || fishX < 0) {
                 fishSpeed *= -1;
             }
