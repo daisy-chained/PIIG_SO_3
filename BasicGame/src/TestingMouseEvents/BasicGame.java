@@ -28,8 +28,14 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void mouseEvent(MouseEvent mouseEvent) {
-
+        int mouseX = mouseEvent.getX();
+        int mouseY = mouseEvent.getY();
+        System.out.println("Mouse clicked");
+        System.out.println("Clicked at (" + mouseX + ", " + mouseY + ")");
     }
+
+
+
 }
 
 
