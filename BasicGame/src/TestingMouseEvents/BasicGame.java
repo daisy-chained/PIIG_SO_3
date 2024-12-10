@@ -32,14 +32,11 @@ public class BasicGame implements GameLoop {
         int mouseY = mouseEvent.getY();
         System.out.println("Mouse clicked");
         System.out.println("Clicked at (" + mouseX + ", " + mouseY + ")");
-    }
 
-
-
+        if (mouseEvent.isMouseDown()) {
+            if (mouseX >= 100 && mouseY <= 300) {
+               System.out.println("Clicked in the right area!");
+            }
+        }
 }
-
-
-
-
-
-
+}
