@@ -13,8 +13,8 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void init() {
-        SaxionApp.drawImage("BasicGame/resources/bubbles.png", 250, 700, 500, 100);
-        SaxionApp.drawImage("BasicGame/resources/exit button.png", 850,50,100,100);
+        SaxionApp.drawImage("BasicGame/resources/bubbles.png", 300, 700, 400, 100);
+        SaxionApp.drawImage("BasicGame/resources/leave.png", 850, 50, 100, 100);
 
     }
 
