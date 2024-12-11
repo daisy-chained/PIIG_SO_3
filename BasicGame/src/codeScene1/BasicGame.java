@@ -30,24 +30,40 @@ public class BasicGame implements GameLoop {
 
     }
 
+    boolean mousePressed = false;
+
     @Override
     public void mouseEvent(MouseEvent mouseEvent) {
         int mouseX = mouseEvent.getX();
         int mouseY = mouseEvent.getY();
+        int leftBorderWidth = 50;
 
-        System.out.println("Clicked at (" + mouseX + ", " + mouseY + ")");
+        if (mouseEvent.isMouseDown() && !mousePressed) {
+            mousePressed = true;
+            System.out.println("Clicked at (" + mouseX + ", " + mouseY + ")");
 
-        int canX = 600;
-        int canY = 580;
-        int canWidth = 100;
-        int canHeight = 100;
+            int canX = 600;
+            int canY = 580;
+            int canWidth = 100;
+            int canHeight = 100;
 
-        if (mouseEvent.isMouseDown()) {
-            if (mouseX >= canX && mouseX <= canX + canWidth &&
+            if (mouseEvent.isMouseDown()) {
+                if (mouseX >= canX && mouseX <= canX + canWidth &&
                     mouseY >= canY && mouseY <= canY + canHeight) {
-                System.out.println("Clicked on the can!");
+                    System.out.println("Clicked on the can!");
+                }
+            }
+            if (mouseEvent.isMouseUp()) {
+                mousePressed = false;
             }
         }
+        if (mouseEvent.isMouseDown()) {
+            if (mouseX >= 0 && mouseX <= leftBorderWidth) {
+                System.out.println("Clicked at (" + mouseX + ", " + mouseY + ")");
+                System.out.println("clicked on left border, you're leaving the scene!");
+            }
+        }
+
     }
 }
 
