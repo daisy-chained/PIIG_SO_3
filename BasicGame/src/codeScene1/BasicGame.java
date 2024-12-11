@@ -22,7 +22,6 @@ public class BasicGame implements GameLoop {
         SaxionApp.drawImage("BasicGame/resources/background scene1.png",0, 0, 1300, 800);
         SaxionApp.drawImage("BasicGame/resources/BISH.png",50, 440, 350, 300);
         SaxionApp.drawImage("BasicGame/resources/Can.png",600, 580, 100, 100);
-
     }
 
     @Override
@@ -63,7 +62,6 @@ public class BasicGame implements GameLoop {
                 System.out.println("clicked on left border, you're leaving the scene!");
             }
         }
-
     }
 }
 
