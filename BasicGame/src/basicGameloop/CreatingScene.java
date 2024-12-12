@@ -1,8 +1,10 @@
 package basicGameloop;
 
+import nl.saxion.app.SaxionApp;
+
 public class CreatingScene {
-    int BishX,BishY,foregroundX,foregroundY;
-    String background,foreground;
+    int BishX,BishY,foregroundX,foregroundY,backgroundX,backgroundY;
+    String background,foreground,BishImage;
     Boolean exitLeft,exitRight;
 
     public CreatingScene(int bishX, int bishY, int foregroundX, int foregroundY, String background, String foreground, Boolean exitLeft, Boolean exitRight) {
@@ -14,5 +16,14 @@ public class CreatingScene {
         this.foreground = foreground;
         this.exitLeft = exitLeft;
         this.exitRight = exitRight;
+        BishImage = "BasicGame/resources/BISH.png";
+        backgroundX = 1300;
+        backgroundY = 800;
+
+    }
+    public Draw(){
+        SaxionApp.drawImage(BishImage,BishX,BishY);
+        SaxionApp.drawImage(background,0,0,backgroundX,backgroundY);
+        SaxionApp.drawImage(foreground,foregroundX,foregroundY);
     }
 }
