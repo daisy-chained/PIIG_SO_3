@@ -1,11 +1,12 @@
 package basicGameloop;
 
 import nl.saxion.app.SaxionApp;
+import nl.saxion.app.interaction.MouseEvent;
 
 public class CreatingScene {
-    int BishX,BishY,foregroundX,foregroundY,backgroundX,backgroundY;
-    String background,foreground,BishImage;
-    Boolean exitLeft,exitRight;
+    int BishX, BishY, foregroundX, foregroundY, backgroundX, backgroundY;
+    String background, foreground, BishImage;
+    Boolean exitLeft, exitRight;
 
     public CreatingScene(int bishX, int bishY, int foregroundX, int foregroundY, String background, String foreground, Boolean exitLeft, Boolean exitRight) {
         BishX = bishX;
@@ -21,9 +22,29 @@ public class CreatingScene {
         backgroundY = 800;
 
     }
-    public Draw(){
-        SaxionApp.drawImage(BishImage,BishX,BishY);
-        SaxionApp.drawImage(background,0,0,backgroundX,backgroundY);
-        SaxionApp.drawImage(foreground,foregroundX,foregroundY);
+
+    public void Draw() {
+
+        SaxionApp.drawImage(background, 0, 0, backgroundX, backgroundY);
+        SaxionApp.drawImage(foreground, foregroundX, foregroundY);
+        SaxionApp.drawImage(BishImage, BishX, BishY);
+    }
+    public int changeScene(MouseEvent mouseEvent) {
+
+
+        if(mouseEvent.isMouseDown()){
+        if(mouseEvent.getX()>= 1100){
+            System.out.println(+1);
+            return -1;
+
+        }else if(mouseEvent.getX()<= 200){
+            System.out.println(-1);
+            return +1;
+        }
+
+
+    }
+        System.out.println(0);
+        return 0;
     }
 }
