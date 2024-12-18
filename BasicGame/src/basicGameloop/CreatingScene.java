@@ -33,18 +33,18 @@ public class CreatingScene {
 
 
         if(mouseEvent.isMouseDown()){
-        if(mouseEvent.getX()>= 1100){
-            System.out.println(+1);
+        if(mouseEvent.getX()>= 1100&& exitRight){
+
             return -1;
 
-        }else if(mouseEvent.getX()<= 200){
-            System.out.println(-1);
+        }else if(mouseEvent.getX()<= 200&& exitLeft){
+
             return +1;
         }
 
 
     }
-        System.out.println(0);
+
         return 0;
     }
 }
