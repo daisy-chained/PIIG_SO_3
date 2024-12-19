@@ -34,12 +34,15 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void keyboardEvent(KeyboardEvent keyboardEvent) {
+        if (keyboardEvent.getKeyCode()==KeyboardEvent.VK_ESCAPE){
+            System.exit(0);
 
+        }
     }
 
     @Override
     public void mouseEvent(MouseEvent mouseEvent) {
-        sceneCounter = sceneCounter + scene[0].changeScene(mouseEvent);
+        sceneCounter = sceneCounter + scene[sceneCounter].changeScene(mouseEvent);
     }
 }
 
