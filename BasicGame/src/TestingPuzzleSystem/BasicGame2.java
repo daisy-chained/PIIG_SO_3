@@ -13,15 +13,18 @@ public class BasicGame2 implements GameLoop {
 
     @Override
     public void init() {
-        boolean[] inventory = new boolean[4];
-        for (int i = 0; i < 4; i++) {
+        boolean[] inventory = new boolean[5];
+        for (int i = 0; i < 5; i++) {
             System.out.println("inventory[" + i + "] = " + inventory[i]);
         }
+
     }
 
     @Override
     public void loop() {
-
+        if(can = pickedUp){
+            inventory[0] = true;
+        }
     }
 
     @Override
