@@ -13,21 +13,17 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void init() {
-        boolean[] inventory = new boolean[3];
+        boolean[] inventory = new boolean[4];
             for (int i=0; i < inventory.length; i++) {
                 inventory[i] = false;
             }
-        inventory[0] = false;
-        inventory[1] = false;
-        inventory[2] = false;
-        inventory[3] = false;
         }
+
 
     }
 
     @Override
     public void loop() {
-
 
     }
 
