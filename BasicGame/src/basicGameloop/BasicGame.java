@@ -43,6 +43,7 @@ public class BasicGame implements GameLoop {
     @Override
     public void mouseEvent(MouseEvent mouseEvent) {
         sceneCounter = sceneCounter + scene[sceneCounter].changeScene(mouseEvent);
+        inSceneMouseEvents.click(mouseEvent,sceneCounter);
     }
 }
 
