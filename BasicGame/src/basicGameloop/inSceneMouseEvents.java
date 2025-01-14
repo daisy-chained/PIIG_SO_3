@@ -16,7 +16,8 @@ public class inSceneMouseEvents {
                     break;
                 case 1:
                     if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685) {
-//                        dialogue.ghost();
+                        tempDrawingSystem.ghostDialoge();
+                        tempDrawingSystem.ghostCount++;
                     }
                     break;
                 case 2:
@@ -39,7 +40,7 @@ public class inSceneMouseEvents {
                     if (mouseEvent.getX() >= 600 && mouseEvent.getX() <= 800 && mouseEvent.getY() >= 580 && mouseEvent.getY() <= 780) {
                         if(inventory.myShit[1]&&inventory.myShit[2]){
                             BasicGame.scene[4].foregroundX = 100000;
-                            inventory.myShit[4] = true;
+                            inventory.myShit[3] = true;
                         }
                     }
                     break;

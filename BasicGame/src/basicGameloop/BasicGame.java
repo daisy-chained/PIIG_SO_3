@@ -30,6 +30,7 @@ public class BasicGame implements GameLoop {
         SaxionApp.clear();
         scene[sceneCounter].Draw();
         inventory.draw();
+        tempDrawingSystem.draw(sceneCounter);
 
     }
 
