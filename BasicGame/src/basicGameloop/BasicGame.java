@@ -18,11 +18,11 @@ public class BasicGame implements GameLoop {
     @Override
     public void init() {
 
-        scene[0] = new CreatingScene(50, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", true, false,"BasicGame/resources/BISH.png");
-        scene[1] = new CreatingScene(150, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", true, true,"BasicGame/resources/BISH.png");
-        scene[2] = new CreatingScene(250, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", true, true,"BasicGame/resources/BISH.png");
-        scene[3] = new CreatingScene(816, 215, 276, 558, "BasicGame/resources/background scene4.png", "BasicGame/resources/Stick.png", true, true,"BasicGame/resources/BISH2.png");
-        scene[4] = new CreatingScene(450, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", false, true,"BasicGame/resources/BISH.png");
+        scene[0] = new CreatingScene(50, 440, 600, 580,136,126, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", true, false,"BasicGame/resources/BISH.png");
+        scene[1] = new CreatingScene(360, 452, 755, 485,200,200, "BasicGame/resources/background scene2.png", "BasicGame/resources/Ghost.png", true, true,"BasicGame/resources/BISH.png");
+        scene[2] = new CreatingScene(250, 440, 600, 580,200,200, "BasicGame/resources/background scene3.png", "BasicGame/resources/Can.png", true, true,"BasicGame/resources/BISH.png");
+        scene[3] = new CreatingScene(816, 215, 276, 558, 200,200,"BasicGame/resources/background scene4.png", "BasicGame/resources/Stick.png", true, true,"BasicGame/resources/BISH2.png");
+        scene[4] = new CreatingScene(450, 440, 600, 580, 200,200,"BasicGame/resources/background scene5.png", "BasicGame/resources/Can.png", false, true,"BasicGame/resources/BISH.png");
     }
 
     @Override

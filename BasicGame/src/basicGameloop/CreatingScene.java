@@ -4,15 +4,17 @@ import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.MouseEvent;
 
 public class CreatingScene {
-    int BishX, BishY, foregroundX, foregroundY, backgroundX, backgroundY;
+    int BishX, BishY, foregroundX, foregroundY, foregroundWidth, foregroundHeight, backgroundX, backgroundY;
     String background, foreground, BishImage;
     Boolean exitLeft, exitRight;
 
-    public CreatingScene(int bishX, int bishY, int foregroundX, int foregroundY, String background, String foreground, Boolean exitLeft, Boolean exitRight, String bishImage) {
+    public CreatingScene(int bishX, int bishY, int foregroundX, int foregroundY, int foregroundWidth,int foregroundHeight, String background, String foreground, Boolean exitLeft, Boolean exitRight, String bishImage) {
         BishX = bishX;
         BishY = bishY;
         this.foregroundX = foregroundX;
         this.foregroundY = foregroundY;
+        this.foregroundWidth = foregroundWidth;
+        this.foregroundHeight = foregroundHeight;
         this.background = background;
         this.foreground = foreground;
         this.exitLeft = exitLeft;
@@ -27,7 +29,7 @@ public class CreatingScene {
     public void Draw() {
 
         SaxionApp.drawImage(background, 0, 0, backgroundX, backgroundY);
-        SaxionApp.drawImage(foreground, foregroundX, foregroundY);
+        SaxionApp.drawImage(foreground, foregroundX, foregroundY,foregroundWidth, foregroundHeight);
         SaxionApp.drawImage(BishImage, BishX, BishY);
     }
     public int changeScene(MouseEvent mouseEvent) {
