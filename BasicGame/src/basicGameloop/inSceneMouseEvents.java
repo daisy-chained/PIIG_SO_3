@@ -7,6 +7,7 @@ public class inSceneMouseEvents {
 
     public static void click(MouseEvent mouseEvent, int sceneCounter) {
         if (mouseEvent.isMouseDown()) {
+            tempDrawingSystem.textCount[sceneCounter]++;
             switch (sceneCounter) {
                 case 0:
                     if (mouseEvent.getX() >= 600 && mouseEvent.getX() <= 736 && mouseEvent.getY() >= 580 && mouseEvent.getY() <= 706) {
@@ -15,17 +16,17 @@ public class inSceneMouseEvents {
                     }
                     break;
                 case 1:
-                    if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685) {
-                        tempDrawingSystem.ghostDialoge();
-                        tempDrawingSystem.ghostCount++;
+                    if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685&&tempDrawingSystem.noneleft[sceneCounter]) {
+                        tempDrawingSystem.textCount[sceneCounter] = 100000;
                     }
                     break;
                 case 2:
                     if (mouseEvent.getX() >= -50 && mouseEvent.getX() <= 550 && mouseEvent.getY() >= 100 && mouseEvent.getY() <= 700) {
-                        if (inventory.myShit[0] && scene2Counter == 1) {
+                        if (inventory.myShit[0] && scene2Counter == 2) {
 
                             BasicGame.scene[2].foregroundX = 100000;
                             inventory.myShit[1] = true;
+                            BasicGame.scene[2].exitLeft = true;
                         }
                         scene2Counter++;
                     }
@@ -38,7 +39,7 @@ public class inSceneMouseEvents {
                     break;
                 case 4:
                     if (mouseEvent.getX() >= 600 && mouseEvent.getX() <= 800 && mouseEvent.getY() >= 580 && mouseEvent.getY() <= 780) {
-                        if(inventory.myShit[1]&&inventory.myShit[2]){
+                        if (inventory.myShit[1] && inventory.myShit[2]) {
                             BasicGame.scene[4].foregroundX = 100000;
                             inventory.myShit[3] = true;
                         }

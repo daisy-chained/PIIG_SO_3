@@ -40,7 +40,7 @@ public class CreatingScene {
 
             return -1;
 
-        }else if(mouseEvent.getX()<= 200&& exitLeft){
+        }else if(mouseEvent.getX()<= 400&& exitLeft){
 
             return +1;
         }
