@@ -3,38 +3,50 @@ package basicGameloop;
 import nl.saxion.app.interaction.MouseEvent;
 
 public class inSceneMouseEvents {
+    public static int scene2Counter = 0;
 
     public static void click(MouseEvent mouseEvent, int sceneCounter) {
-        if(mouseEvent.isMouseDown()){
-        switch (sceneCounter) {
-            case 0:
-                if(mouseEvent.getX()>=600 && mouseEvent.getX() <=736 && mouseEvent.getY() >=580 && mouseEvent.getY()<=706 ){
-                    System.out.println("0hit");
-                }
-                break;
-            case 1:
-                if(mouseEvent.getX()>=755 && mouseEvent.getX() <=955 && mouseEvent.getY() >=485 && mouseEvent.getY() <=685 ){
-                System.out.println("1hit");
-                }
-                break;
-            case 2:
-                if(mouseEvent.getX()>=-50 && mouseEvent.getX() <=550 && mouseEvent.getY() >=100 && mouseEvent.getY() <=700 ){
-                    System.out.println("2hit");
-                }
-                break;
-            case 3:
-                if(mouseEvent.getX()>=276 && mouseEvent.getX() <=876 && mouseEvent.getY() >=558 && mouseEvent.getY() <=708 ){
-                    System.out.println("3hit");
-                }
-                break;
-            case 4:
-                if(mouseEvent.getX()>=600 && mouseEvent.getX() <=800 && mouseEvent.getY() >=580 && mouseEvent.getY() <=780 ){
-                    System.out.println("4hit");
-                }
-                break;
-            default:
-                break;
-        }}
+        if (mouseEvent.isMouseDown()) {
+            switch (sceneCounter) {
+                case 0:
+                    if (mouseEvent.getX() >= 600 && mouseEvent.getX() <= 736 && mouseEvent.getY() >= 580 && mouseEvent.getY() <= 706) {
+                        inventory.myShit[0] = true;
+                        BasicGame.scene[0].foregroundX = 100000;
+                    }
+                    break;
+                case 1:
+                    if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685) {
+//                        dialogue.ghost();
+                    }
+                    break;
+                case 2:
+                    if (mouseEvent.getX() >= -50 && mouseEvent.getX() <= 550 && mouseEvent.getY() >= 100 && mouseEvent.getY() <= 700) {
+                        if (inventory.myShit[0] && scene2Counter == 1) {
+
+                            BasicGame.scene[2].foregroundX = 100000;
+                            inventory.myShit[1] = true;
+                        }
+                        scene2Counter++;
+                    }
+                    break;
+                case 3:
+                    if (mouseEvent.getX() >= 276 && mouseEvent.getX() <= 876 && mouseEvent.getY() >= 558 && mouseEvent.getY() <= 708) {
+                        inventory.myShit[2] = true;
+                        BasicGame.scene[3].foregroundX = 100000;
+                    }
+                    break;
+                case 4:
+                    if (mouseEvent.getX() >= 600 && mouseEvent.getX() <= 800 && mouseEvent.getY() >= 580 && mouseEvent.getY() <= 780) {
+                        if(inventory.myShit[1]&&inventory.myShit[2]){
+                            BasicGame.scene[4].foregroundX = 100000;
+                            inventory.myShit[4] = true;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
 
