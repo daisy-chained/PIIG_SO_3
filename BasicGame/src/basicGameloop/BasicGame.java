@@ -21,7 +21,7 @@ public class BasicGame implements GameLoop {
         scene[0] = new CreatingScene(50, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", true, false);
         scene[1] = new CreatingScene(150, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", true, true);
         scene[2] = new CreatingScene(250, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", true, true);
-        scene[3] = new CreatingScene(350, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", true, true);
+        scene[3] = new CreatingScene(816, 215, 276, 558, "BasicGame/resources/background scene4.png", "BasicGame/resources/Stick.png", true, true);
         scene[4] = new CreatingScene(450, 440, 600, 580, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", false, true);
     }
 
