@@ -8,7 +8,7 @@ public class CreatingScene {
     String background, foreground, BishImage;
     Boolean exitLeft, exitRight;
 
-    public CreatingScene(int bishX, int bishY, int foregroundX, int foregroundY, String background, String foreground, Boolean exitLeft, Boolean exitRight) {
+    public CreatingScene(int bishX, int bishY, int foregroundX, int foregroundY, String background, String foreground, Boolean exitLeft, Boolean exitRight, String bishImage) {
         BishX = bishX;
         BishY = bishY;
         this.foregroundX = foregroundX;
@@ -17,7 +17,8 @@ public class CreatingScene {
         this.foreground = foreground;
         this.exitLeft = exitLeft;
         this.exitRight = exitRight;
-        BishImage = "BasicGame/resources/BISH.png";
+        this.BishImage = bishImage;
+//        BishImage = "BasicGame/resources/BISH.png";
         backgroundX = 1300;
         backgroundY = 800;
 
