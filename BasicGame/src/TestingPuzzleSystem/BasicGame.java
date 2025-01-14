@@ -13,16 +13,13 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void init() {
- //       boolean[] inventory = new boolean[4];
- //           for (int i=0; i < inventory.length; i++) {
- //               inventory[i] = false;
- //           }
+        boolean[] inventory = new boolean[4];
+            for (int i=0; i < inventory.length; i++) {
+                inventory[i] = false;
 
-        ArrayList<Boolean> inventory = new ArrayList<>();
-        inventory.add(false); // Can
-        inventory.add(false); // Fishing Net
-        inventory.add(false); // Fishing Rod
-        inventory.add(false); // Shrimp
+            }
+
+
         }
 
 
