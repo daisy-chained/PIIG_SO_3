@@ -1,4 +1,4 @@
-package codeScene1;
+package archive;
 
 import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.GameLoop;

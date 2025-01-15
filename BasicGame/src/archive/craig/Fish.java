@@ -1,4 +1,4 @@
-package craig;
+package archive.craig;
 
 import nl.saxion.app.SaxionApp;
 

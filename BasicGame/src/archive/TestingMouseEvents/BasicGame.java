@@ -1,4 +1,4 @@
-package testingOverlay;
+package archive.TestingMouseEvents;
 
 import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.GameLoop;
@@ -13,8 +13,6 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void init() {
-        SaxionApp.drawImage("BasicGame/resources/bubbles.png", 300, 700, 400, 100);
-        SaxionApp.drawImage("BasicGame/resources/leave.png", 850, 50, 100, 100);
 
     }
 
@@ -30,12 +28,15 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void mouseEvent(MouseEvent mouseEvent) {
+        int mouseX = mouseEvent.getX();
+        int mouseY = mouseEvent.getY();
+        System.out.println("Mouse clicked");
+        System.out.println("Clicked at (" + mouseX + ", " + mouseY + ")");
 
-    }
+        if (mouseEvent.isMouseDown()) {
+            if (mouseX >= 100 && mouseY <= 300) {
+               System.out.println("Clicked in the right area!");
+            }
+        }
 }
-
-
-
-
-
-
+}

@@ -1,5 +1,3 @@
-package basicGameloop;
-
 import nl.saxion.app.SaxionApp;
 
 import java.awt.*;

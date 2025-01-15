@@ -1,4 +1,4 @@
-package TestingSceneDrawing;
+package archive.TestingSceneDrawing;
 
 import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.GameLoop;

@@ -1,4 +1,4 @@
-package TemplateTesting;
+package archive.TemplateTesting;
 
 import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.GameLoop;
