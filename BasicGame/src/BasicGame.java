@@ -55,6 +55,7 @@ public class BasicGame implements GameLoop {
         sceneCounter = sceneCounter + scene[sceneCounter].changeScene(mouseEvent);
         inSceneMouseEvents.click(mouseEvent, sceneCounter);
         if(sceneCounter == 1){
+
             sceneCounter = inSceneMouseEvents.ending(mouseEvent, sceneCounter);
         }
     }

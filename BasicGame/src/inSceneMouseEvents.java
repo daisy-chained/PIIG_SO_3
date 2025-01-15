@@ -52,14 +52,21 @@ public class inSceneMouseEvents {
         }
     }
 public static int ending(MouseEvent mouseEvent, int sceneCounter) {
+    System.out.println(mouseEvent.getX());
     if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685 && tempDrawingSystem.noneleft[sceneCounter]) {
+
+        System.out.println(mouseEvent.getX());
         if (inventory.myShit[3]) {
             return 5;
         } else if (inventory.myShit[1] && inventory.myShit[2]) {
             return 6;
 
         }
-
+        if(mouseEventCounter>=10&&!inventory.myShit[1] && !inventory.myShit[2]&&!inventory.myShit[3]){
+            return 7;
+        }
+        mouseEventCounter++;
+        System.out.println(mouseEventCounter);
     }return sceneCounter;}
 
 }
