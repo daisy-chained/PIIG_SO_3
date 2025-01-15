@@ -125,21 +125,21 @@ public class tempDrawingSystem {
                         break;
                     case 100000:
 
-                            switch (BasicGame.choice) {
-                                case 49:
-                                    SaxionApp.drawBorderedText("*quietly sobbing*", 555, 430, fontSize);
-                                    BasicGame.scene[1].exitLeft = true;
-                                    break;
-                                case 50:
-                                    SaxionApp.drawBorderedText("*quietly sobbing*", 555, 430, fontSize);
-                                    BasicGame.scene[1].exitLeft = true;
-                                    break;
-                                case 51:
-                                    SaxionApp.drawBorderedText("*happy noises:3*", 555, 430, fontSize);
-                                    BasicGame.scene[1].exitLeft = true;
-                                    break;
+                        switch (BasicGame.choice) {
+                            case 49:
+                                SaxionApp.drawBorderedText("*quietly sobbing*", 555, 430, fontSize);
+                                BasicGame.scene[1].exitLeft = true;
+                                break;
+                            case 50:
+                                SaxionApp.drawBorderedText("*quietly sobbing*", 555, 430, fontSize);
+                                BasicGame.scene[1].exitLeft = true;
+                                break;
+                            case 51:
+                                SaxionApp.drawBorderedText("*happy noises:3*", 555, 430, fontSize);
+                                BasicGame.scene[1].exitLeft = true;
+                                break;
 
-                            }
+                        }
 
                         break;
                 }

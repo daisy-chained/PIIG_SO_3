@@ -16,11 +16,11 @@ public class inSceneMouseEvents {
                     }
                     break;
                 case 1:
-                    if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685&&tempDrawingSystem.noneleft[sceneCounter]) {
-                       if(inventory.myShit[3]){
-                           tempDrawingSystem.draw(6);
-                       }
-                        if(inventory.myShit[1]&&inventory.myShit[2]){
+                    if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685 && tempDrawingSystem.noneleft[sceneCounter]) {
+                        if (inventory.myShit[3]) {
+                            tempDrawingSystem.draw(6);
+                        }
+                        if (inventory.myShit[1] && inventory.myShit[2]) {
                             tempDrawingSystem.draw(7);
                         }
                         tempDrawingSystem.textCount[sceneCounter] = 100000;

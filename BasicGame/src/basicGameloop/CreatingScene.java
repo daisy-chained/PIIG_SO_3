@@ -8,7 +8,7 @@ public class CreatingScene {
     String background, foreground, BishImage;
     Boolean exitLeft, exitRight;
 
-    public CreatingScene(int bishX, int bishY, int foregroundX, int foregroundY, int foregroundWidth,int foregroundHeight, String background, String foreground, Boolean exitLeft, Boolean exitRight, String bishImage) {
+    public CreatingScene(int bishX, int bishY, int foregroundX, int foregroundY, int foregroundWidth, int foregroundHeight, String background, String foreground, Boolean exitLeft, Boolean exitRight, String bishImage) {
         BishX = bishX;
         BishY = bishY;
         this.foregroundX = foregroundX;
@@ -29,24 +29,25 @@ public class CreatingScene {
     public void Draw() {
 
         SaxionApp.drawImage(background, 0, 0, backgroundX, backgroundY);
-        SaxionApp.drawImage(foreground, foregroundX, foregroundY,foregroundWidth, foregroundHeight);
+        SaxionApp.drawImage(foreground, foregroundX, foregroundY, foregroundWidth, foregroundHeight);
         SaxionApp.drawImage(BishImage, BishX, BishY);
     }
+
     public int changeScene(MouseEvent mouseEvent) {
 
 
-        if(mouseEvent.isMouseDown()){
-        if(mouseEvent.getX()>= 1100&& exitRight){
+        if (mouseEvent.isMouseDown()) {
+            if (mouseEvent.getX() >= 1100 && exitRight) {
 
-            return -1;
+                return -1;
 
-        }else if(mouseEvent.getX()<= 400&& exitLeft){
+            } else if (mouseEvent.getX() <= 400 && exitLeft) {
 
-            return +1;
+                return +1;
+            }
+
+
         }
-
-
-    }
 
         return 0;
     }

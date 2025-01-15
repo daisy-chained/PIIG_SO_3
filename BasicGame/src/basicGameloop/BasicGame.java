@@ -11,7 +11,8 @@ public class BasicGame implements GameLoop {
     public static void main(String[] args) {
         SaxionApp.startGameLoop(new BasicGame(), 1300, 800, 40);
     }
-    public static int choice=0;
+
+    public static int choice = 0;
     static CreatingScene[] scene = new CreatingScene[5];
     int sceneCounter = 0;
 
@@ -37,9 +38,9 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void keyboardEvent(KeyboardEvent keyboardEvent) {
-        if(sceneCounter == 1&& keyboardEvent.isKeyPressed()){
-            tempDrawingSystem.textCount[sceneCounter] =10000;
-            choice= keyboardEvent.getKeyCode();
+        if (sceneCounter == 1 && keyboardEvent.isKeyPressed()) {
+            tempDrawingSystem.textCount[sceneCounter] = 10000;
+            choice = keyboardEvent.getKeyCode();
 
         }
         if (keyboardEvent.getKeyCode() == KeyboardEvent.VK_ESCAPE) {
