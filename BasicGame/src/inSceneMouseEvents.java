@@ -1,8 +1,9 @@
+import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.MouseEvent;
 
 public class inSceneMouseEvents {
     public static int scene2Counter = 0;
-
+    public static int mouseEventCounter = 0;
     public static void click(MouseEvent mouseEvent, int sceneCounter) {
         if (mouseEvent.isMouseDown()) {
             tempDrawingSystem.textCount[sceneCounter]++;
@@ -15,14 +16,9 @@ public class inSceneMouseEvents {
                     break;
                 case 1:
                     if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685 && tempDrawingSystem.noneleft[sceneCounter]) {
-                        if (inventory.myShit[3]) {
-                            tempDrawingSystem.draw(6);
-                        }
-                        if (inventory.myShit[1] && inventory.myShit[2]) {
-                            tempDrawingSystem.draw(7);
-                        }
-                        tempDrawingSystem.textCount[sceneCounter] = 100000;
 
+
+                        tempDrawingSystem.textCount[sceneCounter] = 100000;
                     }
                     break;
                 case 2:
@@ -55,6 +51,15 @@ public class inSceneMouseEvents {
             }
         }
     }
+public static int ending(MouseEvent mouseEvent, int sceneCounter) {
+    if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685 && tempDrawingSystem.noneleft[sceneCounter]) {
+        if (inventory.myShit[3]) {
+            return 5;
+        } else if (inventory.myShit[1] && inventory.myShit[2]) {
+            return 6;
 
+        }
+
+    }return sceneCounter;}
 
 }

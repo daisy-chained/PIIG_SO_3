@@ -176,10 +176,16 @@ public class tempDrawingSystem {
                 }
                 break;
             case 5:
+                SaxionApp.drawBorderedText("here is your net and your stick.", 250, 351, fontSize);
+                SaxionApp.drawBorderedText("now catch that shrimp and fuck off.", 250, 376, fontSize);
 
                 break;
             case 6:
 
+                break;
+            case 7:
+                break;
+            case 8:
                 break;
             default:
                 System.err.println("invalid scene counter: " + sceneCounter + "tempdrawingsystem");
