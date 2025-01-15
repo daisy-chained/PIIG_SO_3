@@ -5,7 +5,7 @@ import java.awt.*;
 public class tempDrawingSystem {
     public static boolean showchoices = true;
     public static int fontSize = 25;
-    public static int[] textCount = new int[5];
+    public static int[] textCount = new int[8];
     public static boolean[] noneleft = new boolean[5];
     public static int choiceCount = 0;
 
