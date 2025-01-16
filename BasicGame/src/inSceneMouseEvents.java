@@ -4,6 +4,7 @@ import nl.saxion.app.interaction.MouseEvent;
 public class inSceneMouseEvents {
     public static int scene2Counter = 0;
     public static int mouseEventCounter = 0;
+
     public static void click(MouseEvent mouseEvent, int sceneCounter) {
         if (mouseEvent.isMouseDown()) {
             tempDrawingSystem.textCount[sceneCounter]++;
@@ -51,21 +52,21 @@ public class inSceneMouseEvents {
             }
         }
     }
-public static int ending(MouseEvent mouseEvent, int sceneCounter) {
-    System.out.println(mouseEvent.getX());
-    if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685 && tempDrawingSystem.noneleft[sceneCounter]) {
 
-        System.out.println(mouseEvent.getX());
-        if (inventory.myShit[3]) {
-            return 5;
-        } else if (inventory.myShit[1] && inventory.myShit[2]) {
-            return 6;
+    public static int ending(MouseEvent mouseEvent, int sceneCounter) {
 
-        } else if(mouseEventCounter>=10&&!inventory.myShit[1] && !inventory.myShit[2]&&!inventory.myShit[3]){
-            return 7;
+        if (mouseEvent.getX() >= 755 && mouseEvent.getX() <= 955 && mouseEvent.getY() >= 485 && mouseEvent.getY() <= 685 && tempDrawingSystem.noneleft[sceneCounter]) {
+            if (inventory.myShit[3]) {
+                return 5;
+            } else if (inventory.myShit[1] && inventory.myShit[2]) {
+                return 6;
+
+            } else if (mouseEventCounter >= 10 && !inventory.myShit[1] && !inventory.myShit[2] && !inventory.myShit[3]) {
+                return 7;
+            }
+            mouseEventCounter++;
         }
-        mouseEventCounter++;
-        System.out.println(mouseEventCounter);
-    }return sceneCounter;}
+        return sceneCounter;
+    }
 
 }
