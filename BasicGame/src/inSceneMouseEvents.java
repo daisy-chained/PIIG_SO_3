@@ -23,7 +23,7 @@ public class inSceneMouseEvents {
                     break;
                 case 2:
                     if (mouseEvent.getX() >= -50 && mouseEvent.getX() <= 550 && mouseEvent.getY() >= 100 && mouseEvent.getY() <= 700) {
-                        if (inventory.myShit[0] && scene2Counter == 2) {
+                        if (inventory.myShit[0] && scene2Counter >= 2) {
 
                             BasicGame.scene[2].foregroundX = 100000;
                             inventory.myShit[1] = true;
@@ -61,8 +61,7 @@ public static int ending(MouseEvent mouseEvent, int sceneCounter) {
         } else if (inventory.myShit[1] && inventory.myShit[2]) {
             return 6;
 
-        }
-        if(mouseEventCounter>=10&&!inventory.myShit[1] && !inventory.myShit[2]&&!inventory.myShit[3]){
+        } else if(mouseEventCounter>=10&&!inventory.myShit[1] && !inventory.myShit[2]&&!inventory.myShit[3]){
             return 7;
         }
         mouseEventCounter++;

@@ -29,6 +29,12 @@ public class CreatingScene {
         SaxionApp.drawImage(background, 0, 0, backgroundX, backgroundY);
         SaxionApp.drawImage(foreground, foregroundX, foregroundY, foregroundWidth, foregroundHeight);
         SaxionApp.drawImage(BishImage, BishX, BishY);
+        if(exitLeft) {
+            SaxionApp.drawImage("BasicGame/resources/left.png",0,0,100,100);
+        }
+        if(exitRight) {
+            SaxionApp.drawImage("BasicGame/resources/right.png",1200,0,100,100);
+        }
     }
 
     public int changeScene(MouseEvent mouseEvent) {

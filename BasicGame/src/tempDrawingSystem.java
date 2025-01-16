@@ -77,6 +77,7 @@ public class tempDrawingSystem {
                                         case 0:
                                             SaxionApp.drawBorderedText("Go find someone else, I’d rather feed you to the sharks.", 250, 351, fontSize);
                                             BasicGame.scene[1].exitLeft = true;
+                                            BasicGame.scene[1].exitRight = true;
                                             break;
                                         case 1:
                                             SaxionApp.drawBorderedText("How can you be this cruel", 555, 385, fontSize);
@@ -95,6 +96,7 @@ public class tempDrawingSystem {
                                         case 0:
                                             SaxionApp.drawBorderedText("Seriously? Why would I help a shitty human ghost?", 250, 351, fontSize);
                                             BasicGame.scene[1].exitLeft = true;
+                                            BasicGame.scene[1].exitRight = true;
                                             break;
                                         case 1:
                                             SaxionApp.setTextDrawingColor(Color.cyan);
@@ -108,6 +110,7 @@ public class tempDrawingSystem {
                                         case 0:
                                             SaxionApp.drawBorderedText("ah fuck oke il help you.", 250, 351, fontSize);
                                             BasicGame.scene[1].exitLeft = true;
+                                            BasicGame.scene[1].exitRight = true;
                                             break;
                                         case 1:
                                             SaxionApp.setTextDrawingColor(Color.cyan);
