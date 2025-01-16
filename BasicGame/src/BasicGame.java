@@ -22,9 +22,9 @@ public class BasicGame implements GameLoop {
         scene[2] = new CreatingScene(720, 244, -50, 100, 600, 600, "BasicGame/resources/background scene3.png", "BasicGame/resources/Fishing net normal.png", false, true, "BasicGame/resources/BISH2.png");
         scene[3] = new CreatingScene(816, 215, 276, 558, 600, 150, "BasicGame/resources/background scene4.png", "BasicGame/resources/Stick.png", true, true, "BasicGame/resources/BISH2.png");
         scene[4] = new CreatingScene(850, 440, 600, 580, 200, 200, "BasicGame/resources/background scene5.png", "BasicGame/resources/Shrimp scene 5.png", false, true, "BasicGame/resources/BISH2.png");
-        scene[5] = new CreatingScene(10000,10000,650,400,100,100,"BasicGame/resources/background ending.png","BasicGame/resources/badEnding.png",false,false,"BasicGame/resources/BISH.png");
-        scene[6] = new CreatingScene(10000,10000,650,400,100,100,"BasicGame/resources/background ending.png","BasicGame/resources/mediumEnding.png",false,false,"BasicGame/resources/BISH.png");
-        scene[7] = new CreatingScene(10000,10000,650,400,100,100,"BasicGame/resources/background ending.png","BasicGame/resources/goodEnding.png",false,false,"BasicGame/resources/BISH.png");
+        scene[5] = new CreatingScene(10000, 10000, 650, 400, 100, 100, "BasicGame/resources/background ending.png", "BasicGame/resources/badEnding.png", false, false, "BasicGame/resources/BISH.png");
+        scene[6] = new CreatingScene(10000, 10000, 650, 400, 100, 100, "BasicGame/resources/background ending.png", "BasicGame/resources/mediumEnding.png", false, false, "BasicGame/resources/BISH.png");
+        scene[7] = new CreatingScene(10000, 10000, 650, 400, 100, 100, "BasicGame/resources/background ending.png", "BasicGame/resources/goodEnding.png", false, false, "BasicGame/resources/BISH.png");
 
     }
 
@@ -54,7 +54,7 @@ public class BasicGame implements GameLoop {
     public void mouseEvent(MouseEvent mouseEvent) {
         sceneCounter = sceneCounter + scene[sceneCounter].changeScene(mouseEvent);
         inSceneMouseEvents.click(mouseEvent, sceneCounter);
-        if(sceneCounter == 1){
+        if (sceneCounter == 1) {
 
             sceneCounter = inSceneMouseEvents.ending(mouseEvent, sceneCounter);
         }

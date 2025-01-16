@@ -86,7 +86,6 @@ public class tempDrawingSystem {
                                         case 2:
                                             //good ending?
                                             break;
-
                                     }
                                     break;
                                 case 50:
