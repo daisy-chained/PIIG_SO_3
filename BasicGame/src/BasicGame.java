@@ -2,7 +2,6 @@ import nl.saxion.app.SaxionApp;
 import nl.saxion.app.interaction.GameLoop;
 import nl.saxion.app.interaction.KeyboardEvent;
 import nl.saxion.app.interaction.MouseEvent;
-import nl.saxion.app.audio.MediaPlayer;
 
 
 public class BasicGame implements GameLoop {
@@ -17,7 +16,7 @@ public class BasicGame implements GameLoop {
 
     @Override
     public void init() {
-        SaxionApp.playSound(,true);
+
         scene[0] = new CreatingScene(50, 440, 600, 580, 136, 126, "BasicGame/resources/background scene1.png", "BasicGame/resources/Can.png", false, false, "BasicGame/resources/BISH.png");
         scene[1] = new CreatingScene(360, 452, 755, 485, 200, 200, "BasicGame/resources/background scene2.png", "BasicGame/resources/Ghost.png", false, false, "BasicGame/resources/BISH.png");
         scene[2] = new CreatingScene(720, 244, -50, 100, 600, 600, "BasicGame/resources/background scene3.png", "BasicGame/resources/Fishing net normal.png", false, true, "BasicGame/resources/BISH2.png");
