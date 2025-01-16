@@ -8,12 +8,14 @@ public class tempDrawingSystem {
     public static int[] textCount = new int[8];
     public static boolean[] noneleft = new boolean[5];
     public static int choiceCount = 0;
+    public static int soundplaying = 0;
 
 
     public static void draw(int sceneCounter) {
         SaxionApp.setTextDrawingColor(Color.black);
         switch (sceneCounter) {
             case 0:
+
                 if (!noneleft[sceneCounter]) {
                     switch (textCount[sceneCounter]) {
                         case 0:
@@ -33,6 +35,7 @@ public class tempDrawingSystem {
                 }
                 break;
             case 1:
+
                 switch (textCount[sceneCounter]) {
                     case 1:
                         if (!noneleft[sceneCounter]) {
@@ -147,6 +150,7 @@ public class tempDrawingSystem {
                 break;
 
             case 2:
+
                 //the hint/text for scene3
                 noneleft[sceneCounter - 1] = true;
                 if (!noneleft[sceneCounter]) {
